@@ -40,6 +40,6 @@ spring:
           threadPriority : 5
         jobStore:
           misfireThreshold : 60000
-          class : org.quartz.impl.jdbcjobstore.JobStoreTX
-          driverDelegateClass : org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+#          class : org.quartz.impl.jdbcjobstore.JobStoreTX
+#          driverDelegateClass : org.quartz.impl.jdbcjobstore.StdJDBCDelegate
           useProperties : false
