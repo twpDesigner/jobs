@@ -1,0 +1,45 @@
+
+boot:
+  dynamicDS:
+     uosp40100:
+        defaultDS: true
+        url: jdbc:oracle:thin:@192.168.40.100:1521/uosp
+        driver-class-name: oracle.jdbc.driver.OracleDriver
+        username: uosp
+        password: 123456
+     uospTWP:
+        url: jdbc:oracle:thin:@twp.nevermore.tech:49161/XE
+        driver-class-name: oracle.jdbc.driver.OracleDriver
+        username: uosp
+        password: 123456
+server:
+    context-path: /task
+    port: 8081
+spring:
+  datasource:
+      url: jdbc:oracle:thin:@192.168.40.100:1521/uosp
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+      username: uosp
+      password: 123456
+      type: com.zaxxer.hikari.HikariDataSource
+      hikari:
+        maximum-pool-size: 100
+        minimum-idle: 5
+
+  quartz:
+#      job-store-type: jdbc
+#      jdbc:
+#        initialize-schema: never
+      properties:
+        scheduler:
+          instanceName : MyClusteredScheduler
+          instanceId : AUTO
+        threadPool:
+          class : org.quartz.simpl.SimpleThreadPool
+          threadCount : 25
+          threadPriority : 5
+        jobStore:
+          misfireThreshold : 60000
+          class : org.quartz.impl.jdbcjobstore.JobStoreTX
+          driverDelegateClass : org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+          useProperties : false
