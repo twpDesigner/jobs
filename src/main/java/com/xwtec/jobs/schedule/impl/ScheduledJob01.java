@@ -1,6 +1,5 @@
 package com.xwtec.jobs.schedule.impl;
 
-import com.xwtec.jobs.mapper.ds01.UserMapper;
 import com.xwtec.jobs.schedule.base.ScheduledJob;
 import com.xwtec.jobs.service.impl.business.UserService01;
 import com.xwtec.jobs.service.impl.business.UserService02;
@@ -11,7 +10,6 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,6 +57,7 @@ public class ScheduledJob01 extends ScheduledJob {
         log.info("这是第一个任务 is running…………………………………… ");
         List<Map> user01 = userService01.queryAll();
         List<Map> user02 = userService02.queryAll();
-        log.info("user");
+        log.info("user01"+user01.toString());
+        log.info("user02"+user02.toString());
     }
 }

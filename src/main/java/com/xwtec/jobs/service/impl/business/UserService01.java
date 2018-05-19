@@ -1,6 +1,6 @@
 package com.xwtec.jobs.service.impl.business;
 
-import com.xwtec.jobs.mapper.ds01.UserMapper;
+import com.xwtec.jobs.mapper.ds01.DS01UserMapper;
 import com.xwtec.jobs.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 //import org.core.datasource.boot.config.annotate.TargetDataSource;
@@ -18,11 +18,11 @@ import java.util.Map;
 public class UserService01 implements IUserService {
 
     @Autowired
-    UserMapper userMapper;
+    DS01UserMapper ds01UserMapper;
 
     @TargetDataSource("uosp40100")
     @Override
     public List<Map> queryAll() {
-        return userMapper.queryAll();
+        return ds01UserMapper.queryAll();
     }
 }

@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Map;
 
 @Mapper
-public interface UserMapper {
+public interface DS02UserMapper {
 
-    @Select("select * from User")
+    @Select("select * from TU_BASE_TWP")
     List<Map> queryAll();
 }

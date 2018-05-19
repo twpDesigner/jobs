@@ -1,6 +1,10 @@
 package com.xwtec.jobs.config;
 
 import com.xwtec.jobs.service.ITaskTriggerSchedule;
+import com.xwtec.jobs.service.impl.business.UserService01;
+import lombok.experimental.var;
+import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +16,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 
+@Slf4j
 @Configuration
 public class QuartzConfigration {
 
@@ -31,6 +36,8 @@ public class QuartzConfigration {
             @Override
             public void run(String... args) throws Exception {
                 iTaskTriggerSchedule.execute();
+//                val ss = userService01.queryAll();
+//                log.info("ss:"+ss.toString());
             }
         };
     }

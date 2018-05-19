@@ -1,6 +1,6 @@
 package com.xwtec.jobs.service.impl.business;
 
-import com.xwtec.jobs.mapper.ds02.UserMapper;
+import com.xwtec.jobs.mapper.ds02.DS02UserMapper;
 import com.xwtec.jobs.service.IUserService;
 import org.core.datasource.boot.config.annotate.TargetDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,11 +15,11 @@ import java.util.Map;
 public class UserService02 implements IUserService {
 
     @Autowired
-    UserMapper userMapper;
+    DS02UserMapper ds02UserMapper;
 
     @TargetDataSource("uospTWP")
     @Override
     public List<Map> queryAll() {
-        return userMapper.queryAll();
+        return ds02UserMapper.queryAll();
     }
 }

@@ -3,9 +3,9 @@ boot:
   dynamicDS:
      uosp40100:
         defaultDS: true
-        url: jdbc:oracle:thin:@192.168.40.100:1521/uosp
-        driver-class-name: oracle.jdbc.driver.OracleDriver
-        username: uosp
+        url: jdbc:mysql://twp.nevermore.tech:43306/dfs?useUnicode=true&characterEncoding=UTF-8
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
         password: 123456
      uospTWP:
         url: jdbc:oracle:thin:@twp.nevermore.tech:49161/XE
@@ -17,7 +17,7 @@ server:
     port: 8081
 spring:
   datasource:
-      url: jdbc:oracle:thin:@192.168.40.100:1521/uosp
+      url: jdbc:oracle:thin:@twp.nevermore.tech:49161/XE
       driver-class-name: oracle.jdbc.driver.OracleDriver
       username: uosp
       password: 123456
