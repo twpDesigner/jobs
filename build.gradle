@@ -43,7 +43,7 @@ repositories {
 }
 dependencies{
     //compile(project(":icp"))
-    compile('com.twp:icp:0.0.1')
+    compile('com.xwtec:icp:1.0')
     compile('org.springframework.boot:spring-boot-starter-web:2.0.1.RELEASE')
     compile files('libs/ojdbc8.jar')
     //compile files('libs/icp-0.0.1.jar')

@@ -32,7 +32,7 @@ public class ScheduledJob01 implements IJob {
 
     @Override
     public void execute(JobExecutionContext context) throws JobExecutionException {
-        log.info("这是第一个任务 is running…………………………………… ");
+        log.info("这是第一个任务 is runningdsadasdsa…………………………………… ");
         List<Map> user01 = userService01.queryAll();
         List<Map> user02 = userService02.queryAll();
         log.info("user01"+user01.toString());
