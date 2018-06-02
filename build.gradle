@@ -38,6 +38,7 @@ repositories {
     //依赖寻源顺序
     //mavenLocal()
     maven { url 'http://218.94.54.84:30005/repository/icp/' }
+    maven { url 'http://218.94.54.84:30005/repository/jodconverter-core/' }
     maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
     mavenCentral()//依赖Maven仓库
 }
@@ -48,6 +49,7 @@ dependencies{
     compile files('libs/ojdbc8.jar')
     //compile files('libs/icp-0.0.1.jar')
     compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.46'
+    compile 'cn.keking:jodconverter-core:1.0'
     //compile("org.springframework.boot:spring-boot-starter-data-jpa:1.5.12.RELEASE")
 
 }
